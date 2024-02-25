@@ -34,7 +34,6 @@ I'm happy to have friends on this journey who are in the mood to hack on it with
 - [ ] Make any adjustments needed for horizontal scaling in containers
 - [ ] Add load balancer 
 - [ ] Refactor to use [Axum](https://github.com/tokio-rs/axum) instead of Reqwest.
-
 *[This PR](https://github.com/DarrenBaldwin07/clerk-rs/pull/32) is close and will make this easy to do and more dev friendly.*
 
 #### If Needed
