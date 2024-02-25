@@ -15,7 +15,7 @@ I'm happy to have friends on this journey who are in the mood to hack on it with
 - [ ] Define API
 - [ ] Containerize for development
 - [ ] Build Config mechanism
-- [ ] Build Simple Routing mechanism (JWT auth from front end, all just passed username / basic user metadata from Clerk.io, contents TBD)
+- [ ] Build Simple Routing mechanism with Reqwest (JWT auth from front end, all just passed username / basic user metadata from Clerk.io, contents TBD)
 
 *as time allows, build the Clerk interface to back pair of auth and metadata services so that the auth/metadata service is configurable*
 
@@ -33,6 +33,9 @@ I'm happy to have friends on this journey who are in the mood to hack on it with
 #### Medium Priority
 - [ ] Make any adjustments needed for horizontal scaling in containers
 - [ ] Add load balancer 
+- [ ] Refactor to use [Axum](https://github.com/tokio-rs/axum) instead of Reqwest.
+
+*[This PR](https://github.com/DarrenBaldwin07/clerk-rs/pull/32) is close and will make this easy to do and more dev friendly.*
 
 #### If Needed
 - [ ] Add Redis or other backing service interface for service metadata (separate from auth/Clerk)
