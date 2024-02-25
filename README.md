@@ -1,6 +1,8 @@
 # API Gateway 
 A simple configurable API gateway for linking microservices to the Tulsa Web Devs User Group site.
 
+For information on currently registered services or how to register a new service, see [SERVICES.md](./SERVICES.md)
+
 Built in Rust and containerized with Docker. 
 
 ## CONTRIBUTING
