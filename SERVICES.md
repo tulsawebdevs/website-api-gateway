@@ -1,0 +1,19 @@
+# Services
+
+## Adding a New Service
+To register a service with the gateway to make it available for use from the [Tulsa Web Devs UG Site](https://tulsawebdevs.org), perform the following steps:
+- add an entry to `gateway_config.toml` in the following format:
+```toml
+[services.name] # where 'name' is a unique kebab-case name for your service
+path="/myservice" # unique path the frontend will make a request to at /api[path]
+target_service="https://my-service.default.svc.cluster.local" # the host for the service
+target_port=8080 # the target port for your service
+```
+- add an entry for your service in the list below with a brief description of your service and a link to the documentation
+
+**PR's that do not include documentation of the service will not be merged**
+
+## Registered Services
+*Use the following basic format `[repo link](https://myservicelocation)` - Service Name / short description
+
+-[Tulsa Web Devs UG Site](https://tulsawebdevs.org) - The Frontend Static Site that uses this API Gateway
