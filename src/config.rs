@@ -1,18 +1,18 @@
 use serde::{Deserialize, Serialize};
+use std::collections::HashMap;
 use std::{fs::File, io::Read};
-use toml;
 
 #[derive(Serialize, Deserialize, Debug, Clone)]
 pub struct ServiceConfig {
     pub path: String,
-    pub target_service: String,
+    pub target_host: String,
     pub target_port: u32,
 }
 
 #[derive(Serialize, Deserialize, Debug, Clone)]
 pub struct GatewayConfig {
     pub auth_url: String,
-    pub services: Vec<ServiceConfig>,
+    pub services: HashMap<String, ServiceConfig>,
 }
 
 pub fn load_config(path: &str) -> GatewayConfig {
