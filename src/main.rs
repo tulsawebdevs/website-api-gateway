@@ -1,6 +1,6 @@
 use std::net::SocketAddr;
 
-use config::{load_config, GatewayConfig, ServiceConfig};
+use config::load_config;
 
 mod config;
 
@@ -8,4 +8,5 @@ mod config;
 async fn main() {
     let config = load_config("gateway_config.toml");
     let addr = SocketAddr::from(([0, 0, 0, 0], 8080));
+    println!("config:{:?}, addr:{:?}", config, addr);
 }
