@@ -1,0 +1,6 @@
+auth_url="https://example.com"
+
+[services.test-service]
+path="/testservice"
+target_host="https://my-service.default.svc.cluster.local"
+target_port=8080

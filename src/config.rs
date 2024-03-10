@@ -21,3 +21,27 @@ pub fn load_config(path: &str) -> GatewayConfig {
     file.read_to_string(&mut contents).unwrap();
     toml::from_str(&contents).unwrap()
 }
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn parses_config() -> Result<(), std::io::Error> {
+        let config = load_config("./tests/test_config.toml");
+        let test_service = config
+            .services
+            .get("test-service")
+            .expect("test service not found");
+
+        assert_eq!(config.auth_url, "https://example.com");
+        assert_eq!(test_service.path, "/testservice");
+        assert_eq!(
+            test_service.target_host,
+            "https://my-service.default.svc.cluster.local"
+        );
+        assert_eq!(test_service.target_port, 8080);
+
+        Ok(())
+    }
+}
