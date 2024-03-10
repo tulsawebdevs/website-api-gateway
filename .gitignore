@@ -2,3 +2,5 @@
 
 # jetbrains IDE config
 .idea/
+
+.env
