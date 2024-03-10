@@ -34,12 +34,11 @@ mod tests {
             .expect("test service not found");
 
         assert_eq!(config.auth_url, "https://example.com");
-        assert_eq!(test_service.path, "/testservice");
         assert_eq!(
-            test_service.target_host,
+            test_service.host,
             "https://my-service.default.svc.cluster.local"
         );
-        assert_eq!(test_service.target_port, 8080);
+        assert_eq!(test_service.port, 8080);
 
         Ok(())
     }
