@@ -4,9 +4,8 @@ use std::{fs::File, io::Read};
 
 #[derive(Serialize, Deserialize, Debug, Clone)]
 pub struct ServiceConfig {
-    pub path: String,
-    pub target_host: String,
-    pub target_port: u32,
+    pub host: String,
+    pub port: u32,
 }
 
 #[derive(Serialize, Deserialize, Debug, Clone)]

@@ -1,13 +1,16 @@
+auth_url = "example.com"
 whitelist = [
 	"localhost/*"
 ]
 
 [services.users]
-path="/users"
-target_service="http://user-service.default.svc.cluster.local"
-target_port=8080
+host="http://user-service.default.svc.cluster.local"
+port=8080
 
 [services.orders]
-path="/orders"
-target_service="http://order-service.default.svc.cluster.local"
-target_port=8080
+host="http://order-service.default.svc.cluster.local"
+port=8080
+
+[services.test]
+host="https://google.com"
+port=443

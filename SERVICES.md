@@ -6,8 +6,8 @@ To register a service with the gateway to make it available for use from the [Tu
 ```toml
 [services.name] # where 'name' is a unique kebab-case name for your service
 path="/myservice" # unique path the frontend will make a request to at /api[path]
-target_host="https://my-service.default.svc.cluster.local" # the host for the service
-target_port=8080 # the target port for your service
+host="https://my-service.default.svc.cluster.local" # the host for the service
+port=8080 # the target port for your service
 ```
 - add an entry for your service in the list below with a brief description of your service and a link to the documentation
 
